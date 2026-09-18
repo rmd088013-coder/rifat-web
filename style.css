@@ -1,0 +1,404 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: #0b1220;
+}
+
+nav h2 {
+    color: #00e5ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#home {
+    min-height: 400px;
+}
+
+h1 {
+    font-size: 45px;
+    color: #00e5ff;
+}
+
+p {
+    font-size: 20px;
+    color: #cccccc;
+}
+
+button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #00e5ff;
+    font-size: 17px;
+}
+#home img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00e5ff;
+}
+#about {
+    background: #0b1220;
+    min-height: 300px;
+}
+
+#about h2 {
+    font-size: 35px;
+    color: #00e5ff;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+.info {
+    margin-top: 30px;
+}
+#contact {
+    min-height: 300px;
+}
+
+#contact h2 {
+    font-size: 35px;
+    color: #00e5ff;
+}
+
+.social {
+    margin-top: 30px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background: #00e5ff;
+    color: #111827;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Page animation */
+body {
+    animation: pageLoad 1s ease;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Profile photo animation */
+#home img {
+    animation: photoIn 1.2s ease, float 3s ease-in-out infinite;
+}
+
+@keyframes photoIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Heading animation */
+#home h1 {
+    animation: textIn 1s ease 0.3s both;
+}
+
+#home p {
+    animation: textIn 1s ease 0.6s both;
+}
+
+@keyframes textIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button animation */
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.35);
+}
+
+/* Navigation hover */
+nav a {
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+/* Social buttons */
+.social a {
+    transition: 0.3s;
+}
+
+.social a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.35);
+}
+/* Dark / Light Mode */
+
+body {
+    transition: background 0.4s, color 0.4s;
+}
+
+body.light-mode {
+    background: #f5f7fa;
+    color: #111827;
+}
+
+body.light-mode nav {
+    background: white;
+}
+
+body.light-mode nav a {
+    color: #111827;
+}
+
+body.light-mode p {
+    color: #444;
+}
+
+body.light-mode #about {
+    background: #e9edf2;
+}
+
+#themeToggle {
+    padding: 8px 14px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.05);
+}
+/* Automatic text colors in Light Mode */
+
+body.light-mode h1,
+body.light-mode h2 {
+    color: #007c91;
+}
+
+body.light-mode p {
+    color: #333333;
+}
+
+body.light-mode nav h2 {
+    color: #007c91;
+}
+
+body.light-mode button {
+    background: #007c91;
+    color: white;
+}
+
+body.light-mode .social a {
+    background: #007c91;
+    color: white;
+}
+/* Hero Section Animation */
+
+#home img {
+    transition: transform 0.15s ease, filter 0.15s ease, opacity 0.15s ease;
+    transform-origin: center center;
+}
+
+#home h1 {
+    animation: titleIn 1s ease-out 0.3s both;
+}
+
+#home p {
+    animation: textIn 1s ease-out 0.6s both;
+}
+
+#home button {
+    animation: buttonIn 1s ease-out 0.9s both;
+}
+
+/* Profile photo */
+@keyframes profileIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Floating effect */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Title */
+@keyframes titleIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text */
+@keyframes textIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button */
+@keyframes buttonIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* iPhone Style Scroll Zoom */
+
+#about,
+#contact {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    transform-origin: center center;
+}
+
+#about h2,
+#about p,
+#contact h2,
+#contact p {
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+/* iPhone Style Glass Navbar */
+
+nav {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+
+    margin: 10px 15px;
+    border-radius: 20px;
+
+    background: rgba(11, 18, 32, 0.60);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+    transition: 0.4s ease;
+}
+
+/* Light Mode Glass Navbar */
+
+body.light-mode nav {
+    background: rgba(0, 180, 200, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+nav {
+    padding: 10px 20px;
+    margin: 8px 12px;
+    border-radius: 18px;
+
+    background: rgba(11, 18, 32, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+body.light-mode nav {
+    background: rgba(255, 255, 255, 0.55);
+}
+/* Light Mode Navbar Color */
+
+body.light-mode nav {
+    background: rgba(0, 190, 220, 0.28) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 100, 220, 0.35);
+}
+
+body.light-mode nav a {
+    color: #0645a5 !important;
+}
